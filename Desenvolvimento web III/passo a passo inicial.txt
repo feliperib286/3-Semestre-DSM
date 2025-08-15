@@ -1,3 +1,5 @@
+liberar o powershell
+
 set-executionpolicy remotesigned
 
 npm init -y
@@ -95,4 +97,5 @@ no tsconfig
  para rodar a ligacao 
 
 npx prisma migrate dev --name init
+
     
