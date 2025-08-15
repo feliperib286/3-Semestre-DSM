@@ -94,8 +94,9 @@ no tsconfig
   }
 }
 
- para rodar a ligacao 
+ para rodar a ligacao  rodar como consta o codigo a seguir
 
 npx prisma migrate dev --name init
 
     
+
