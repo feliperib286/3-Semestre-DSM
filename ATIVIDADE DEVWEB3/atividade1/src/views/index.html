@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador Pessoa x Carro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🚗 Gerenciador Pessoa x Carro</h1>
+
+  <!-- Carros -->
+  <section>
+    <h2>Carros</h2>
+    <form id="formCarro">
+      <input type="text" id="carroModelo" placeholder="Modelo" required>
+      <button type="submit">Adicionar Carro</button>
+    </form>
+    <ul id="listaCarros"></ul>
+  </section>
+
+  <!-- Pessoas -->
+  <section>
+    <h2>Pessoas</h2>
+    <form id="formPessoa">
+      <input type="text" id="pessoaNome" placeholder="Nome" required>
+      <button type="submit">Adicionar Pessoa</button>
+    </form>
+    <ul id="listaPessoas"></ul>
+  </section>
+
+  <!-- Associações -->
+  <section>
+    <h2>Associações Pessoa ↔ Carro</h2>
+    <form id="formAssociacao">
+      <input type="number" id="assocPessoaId" placeholder="ID da Pessoa" required>
+      <input type="number" id="assocCarroId" placeholder="ID do Carro" required>
+      <button type="submit">Associar</button>
+    </form>
+    <ul id="listaAssociacoes"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
