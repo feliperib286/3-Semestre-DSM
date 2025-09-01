@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Aniversário!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #1d72b8;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    strong {
+      color: #1d72b8;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ff6f61;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin: 0 auto;
+    }
+
+    .btn:hover {
+      background-color: #e65b50;
+    }
+
+    .signature {
+      display: block;
+      margin: 30px auto 0 auto;
+      width: 200px;
+      height: auto;
+    }
+
+    @media only screen and (max-width: 620px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="imagens/logo oculos.png" alt="Logo da empresa">
+    <h1>Feliz Aniversário, <strong>{{nome}}</strong>!</h1>
+    <p>Nessa data tão especial, gostaríamos de desejar-lhe nosso Parabéns por mais este ano de vida.</p>
+    <p>Como presente, estamos lhe oferecendo <strong>{{percdesc}}%</strong> de desconto em todas as armações de óculos.</p>
+    <p>O desconto é válido até o final do mês que vem: <strong>{{mesquevem}}</strong>.</p>
+    <p><a href="#" class="btn">Aproveite seu presente!</a></p>
+    <p>Atenciosamente,</p>
+    <img class="signature" src="imagens/assinatura.png" alt="Assinatura">
+  </div>
+</body>
+</html>
