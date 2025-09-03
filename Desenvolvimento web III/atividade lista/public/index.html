@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Compras Semanal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Lista de Compras Semanal</h1>
+ 
+  <!-- Formulário de cadastro -->
+  <form id="lista-form">
+    <input type="hidden" id="lista-id">
+    <input type="text" id="produto" placeholder="Produto" required>
+    <input type="number" id="valor" placeholder="Valor" required>
+    <input type="text" id="quantidade" placeholder="Quantidade" required>
+    
+    <button type="submit">Salvar</button>
+  </form>
+ 
+  <h2>Lista de Compras Semanal</h2>
+  <table border = "1">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Valor</th>
+        <th>Quantidade</th>
+      </tr>
+    </thead>
+    <tbody id="clientes-lista"></tbody>
+  </table>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

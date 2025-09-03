@@ -1,0 +1,201 @@
+/* Paleta de Cores:
+   Fundo: #f7f7f7 (cinza muito claro)
+   Texto: #333333 (cinza escuro)
+   Primário: #d62828 (vermelho Shibata)
+   Secundário: #0044cc (azul forte)
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('./imagem/compras.png');
+    background-size: cover;
+    /* Faz a imagem cobrir toda a tela */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita repetição */
+    background-attachment: fixed;
+    /* A imagem fica fixa ao rolar a página */
+    background-color: #f7f7f7;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: black; /* cor da letra preta */
+    text-transform: uppercase;
+    font-weight: 900; /* negrito forte */
+    font-size: 3rem; /* deixa bem grande */
+
+    /* contorno branco ao redor */
+    text-shadow:
+        -2px -2px 0 white,
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white;
+    
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Formulário */
+#lista-form {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #0044cc;
+    outline: none;
+}
+
+::placeholder {
+    color: #999999;
+}
+
+/* Botão */
+button[type="submit"] {
+    background-color: #d62828;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #b81f1f;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background-color: #0044cc;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+}
+
+tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        color: #0044cc;
+        text-align: left;
+    }
+}
+
+/* Botões de ação */
+.acao-btn {
+    padding: 8px 14px;
+    margin-right: 6px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+/* Botão Editar */
+.editar-btn {
+    background-color: #0044cc;
+}
+
+.editar-btn:hover {
+    background-color: #0033aa;
+}
+
+/* Botão Excluir */
+.excluir-btn {
+    background-color: #d62828;
+}
+
+.excluir-btn:hover {
+    background-color: #b81f1f;
+}
