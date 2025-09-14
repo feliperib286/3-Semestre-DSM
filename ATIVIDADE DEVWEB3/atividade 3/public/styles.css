@@ -1,0 +1,223 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #ebb41d;
+  color: #f1eee3;
+  padding: 40px;
+}
+
+/* Títulos destacados */
+h2, h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  
+  /* Caixa */
+  background-color: #fff;   /* fundo branco */
+  padding: 12px 20px;
+  border: 2px solid #5c3d2e; /* borda marrom para combinar com o tema */
+  border-radius: 8px;
+  display: inline-block; /* faz a caixa abraçar o texto */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* sombra para destacar */
+}
+
+
+/* Formulário */
+form {
+  background-color: #fff8e1;
+  padding: 20px;
+  border: 1px solid #d6c1a3;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #bfae94;
+  border-radius: 4px;
+  background-color: #fffdf5;
+}
+
+form button[type="submit"] {
+  background-color: #8b5e3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #6e472b;
+}
+
+/* Lista de livros */
+#lista-livros {
+  max-width: 600px;
+}
+
+.livro-item {
+  background-color: #fffdf5;
+  border: 1px solid #d6c1a3;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Botões de ação */
+.btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: #c9a66b;
+  color: #fff;
+}
+
+.btn-excluir {
+  background-color: #a94442;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: url('https://love-africa.com/wp-content/uploads/2023/08/Image-of-Library-1024x574.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #3e2f1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Camada semitransparente para leitura */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+
+  z-index: -1;
+}
+
+
+
+/* Centralizar conteúdo */
+.container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Formulário */
+form {
+  background-color: #fff8e1;
+  padding: 25px;
+  border: 1px solid #d6c1a3;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+form input[type="text"],
+form input[type="number"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #bfae94;
+  border-radius: 6px;
+  background-color: #fffdf5;
+}
+
+form button[type="submit"] {
+  background-color: #8b5e3c;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+form button[type="submit"]:hover {
+  background-color: #6e472b;
+}
+
+/* Lista de livros */
+#listaLivros {
+  width: 100%;
+}
+
+.livro-item {
+  background-color: #fffdf5;
+  border: 1px solid #d6c1a3;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Botões de ação */
+.btn {
+  margin-left: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: #c9a66b;
+  color: #fff;
+}
+
+.btn-excluir {
+  background-color: #a94442;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
