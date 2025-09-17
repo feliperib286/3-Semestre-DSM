@@ -5,15 +5,14 @@
  "main": "index.js",
  "scripts": {
  "test": "echo \"Error: no test specified\" && exit 1",
- "index": "npx ts-node ./src/index",
- "ex01": "ts-node ./src/ex01",
- "ex02": "ts-node ./src/ex02",
- "ex03": "ts-node ./src/ex03",
- "ex04": "ts-node ./src/ex04",
- "ex05": "ts-node ./src/ex05",
- "teste": "ts-node ./src/teste",
- "teste1": "ts-node ./src/teste1",
- "teste2": "ts-node ./src/teste2"
+ "index": "npx ts-node ./src/index.ts",
+ "ex02": "ts-node ./src/ex02.ts",
+ "ex03": "ts-node ./src/ex03.ts",
+ "ex04": "ts-node ./src/ex04.ts",
+ "ex05": "ts-node ./src/ex05.ts",
+ "teste": "ts-node ./src/teste.ts",
+ "teste1": "ts-node ./src/teste1.ts",
+ "teste2": "ts-node ./src/teste2.ts"
  },
  "keywords": [],
  "author": "Prof.Henrique Louro",
