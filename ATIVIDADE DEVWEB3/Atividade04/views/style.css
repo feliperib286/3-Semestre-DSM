@@ -1,0 +1,193 @@
+/* views/style.css com cores vivas e chamativas */
+:root {
+    /* Paleta de Cores Vibrantes (Exemplo: Aqua, Coral e Azul Marinho) */
+    --cor-fundo-geral: linear-gradient(135deg, #1A237E, #00BCD4); /* Azul escuro para Azul Claro/Aqua */
+    --cor-card-clima: #FFFFFF;
+    --cor-primaria: #FF6F61; /* Coral chamativo para o botão e título de resultado */
+    --cor-secundaria: #00BCD4; /* Aqua/Ciano para acentos e detalhes */
+    --cor-texto-claro: #FFFFFF;
+    --cor-texto-escuro: #333333;
+    --cor-erro: #D81B60; /* Rosa Choque para erro */
+    --sombra-card: 0 10px 20px rgba(0, 0, 0, 0.15);
+    --sombra-botao: 0 4px 10px rgba(255, 111, 97, 0.4);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--cor-fundo-geral);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--cor-card-clima);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--sombra-card);
+    text-align: center;
+    width: 95%;
+    max-width: 450px;
+    transition: all 0.3s ease;
+}
+
+h1 {
+    color: var(--cor-texto-escuro);
+    margin-bottom: 1.2em;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+#weather-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    flex-grow: 1;
+    padding: 1em 1.2em;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#city-input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.2);
+}
+
+button {
+    padding: 1em 1.8em;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: var(--sombra-botao);
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    min-width: 100px;
+}
+
+button:hover {
+    background-color: #E65A50; /* Um tom de coral mais escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 111, 97, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: var(--sombra-botao);
+}
+
+#weather-result {
+    margin-top: 25px;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f7f7f7; /* Fundo suave para o resultado */
+    border: 1px solid #eee;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.weather-info {
+    padding: 10px 0;
+}
+
+.weather-info h2 {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: var(--cor-primaria);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.weather-info img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.weather-info p {
+    font-size: 1.1em;
+    margin: 0.7em 0;
+    color: var(--cor-texto-escuro);
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px dashed #cccccc;
+}
+
+.weather-info p:last-child {
+    border-bottom: none;
+}
+
+.weather-info strong {
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+#error-message:empty {
+    /* Esconde a div de erro quando não há texto dentro dela */
+    display: none;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.error {
+    color: var(--cor-erro);
+    margin-top: 1.5em; 
+    font-weight: bold;
+    background-color: #FFEBEE;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-erro);
+    animation: shake 0.5s;
+    display: block; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
+  20%, 40%, 60%, 80% {transform: translateX(5px);}
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #weather-form {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
