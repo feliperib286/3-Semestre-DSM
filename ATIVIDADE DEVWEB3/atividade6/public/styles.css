@@ -1,0 +1,176 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da Página: Fundo e Efeito Vinil */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  background-color: #cbbaba; /* Fundo muito escuro, quase preto (cor de vinil) */
+  color: #e0e0e0; /* Texto claro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  /* Adicionar um efeito de brilho sutil no fundo */
+  background: radial-gradient(circle at center, #171ea6 0%, #1ab25e 70%);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Títulos com Emojis e Estilo Moderno */
+h2, h3 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #f0c040; /* Dourado/Amarelo do tema Vinil */
+  font-weight: 600;
+  letter-spacing: 1px;
+  /* Emoji de Disco ou Fone */
+}
+
+h2::before {
+  content: "🎧 ";
+}
+
+h3::before {
+  content: "🎶 ";
+}
+
+/* Formulário de Cadastro/Edição */
+form {
+  background-color: #212121;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  /* Sombra suave e moderna */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+}
+
+form input,
+form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 14px;
+  font-size: 16px;
+  border: none; /* Remover a borda padrão */
+  border-radius: 8px;
+  background-color: #333333;
+  color: #e0e0e0;
+  transition: box-shadow 0.3s;
+  /* Estilo Inset (parece "afundado") */
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.7), inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  background-color: #444444;
+  /* Borda sutil no foco */
+  box-shadow: 0 0 0 2px #f0c040; 
+}
+
+/* Botões do Formulário */
+form button {
+  background-color: #f0c040; 
+  color: #121212;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  /* Sombra externa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+form button:hover {
+  background-color: #e0b030;
+  transform: translateY(-2px);
+}
+
+#btnSalvar::before {
+  content: "💿 "; /* Emoji de salvar */
+}
+
+#btnLimpar::before {
+  content: "❌ "; /* Emoji de limpar */
+}
+
+
+/* Lista de Discos */
+#listaDiscos {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.disco-item {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Sombra de destaque */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+
+.disco-item:hover {
+  transform: translateY(-3px); /* Efeito flutuante no hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.disco-item p {
+  margin: 3px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botões de Ação na Lista */
+.btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #121212;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-editar {
+  background-color: #1e90ff; /* Azul para edição */
+  color: #fff;
+}
+
+.btn-editar::before {
+  content: "✏️ "; /* Emoji de caneta */
+}
+
+.btn-excluir {
+  background-color: #dc3545; /* Vermelho para exclusão */
+  color: #fff;
+}
+
+.btn-excluir::before {
+  content: "🗑️ "; /* Emoji de lixeira */
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
