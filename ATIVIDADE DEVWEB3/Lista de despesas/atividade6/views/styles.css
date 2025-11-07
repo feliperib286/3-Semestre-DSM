@@ -1,0 +1,193 @@
+/* views/styles.css */
+
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9; /* Fundo suave */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Título */
+h1 {
+  text-align: center; 
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Formulário de Cadastro (AGORA SÓ INPUTS) */
+#expenseForm {
+  display: flex;
+  gap: 10px; 
+  margin-bottom: 15px; 
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+}
+
+#expenseForm input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#description {
+  flex-grow: 3; 
+}
+#amount, #date {
+  flex-grow: 1; 
+  max-width: 150px;
+}
+
+/* LINHA 2: Botões de Ação (Cadastrar/Limpar) */
+#actionButtons {
+  display: flex;
+  gap: 10px;
+  /* Alinha os botões à direita, como na imagem */
+  justify-content: flex-end; 
+  margin-bottom: 30px; /* Espaço antes do Total */
+}
+
+/* Estilos dos botões (agora independentes) */
+#btnSubmit, #btnCancelEdit {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  flex-grow: 0; /* Remove o crescimento automático */
+  min-width: 150px; /* Largura mínima para os botões */
+}
+
+#btnSubmit {
+  background-color: #28a745; 
+  color: white;
+}
+
+#btnSubmit:hover {
+  background-color: #218838;
+}
+
+#btnCancelEdit {
+  background-color: #ffc107; 
+  color: #333;
+  /* Oculto por padrão, como no JavaScript anterior */
+  display: none; 
+}
+
+/* Total das Despesas */
+#totalExpenses {
+  text-align: center; 
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  color: #007bff; 
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* --- NOVO CABEÇALHO DA LISTA --- */
+.expense-header {
+  display: grid;
+  /* Define as colunas: 3fr (Descrição), 1.5fr (Valor), 1.5fr (Data), 2fr (Ações) */
+  grid-template-columns: 3fr 1.5fr 1.5fr 2fr;
+  gap: 10px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Centraliza o cabeçalho "Ações" */
+.expense-header span:last-child {
+  justify-self: center; 
+}
+
+/* --- Lista de Despesas (AGORA COM GRID) --- */
+#expensesList {
+  margin-top: 0; /* Remove a margem, pois o header já tem */
+}
+
+.expense-item {
+  display: grid; /* MUDANÇA PRINCIPAL: de flex para grid */
+  /* Usa as MESMAS colunas do header */
+  grid-template-columns: 3fr 1.5fr 1.5fr 2fr;
+  gap: 10px;
+  align-items: center; /* Centraliza verticalmente */
+  
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.expense-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos das novas células */
+.cell-description {
+  word-break: break-word; /* Quebra descrição longa */
+  font-weight: 500;
+}
+
+.cell-amount {
+  color: #333;
+}
+
+.cell-date {
+  color: #777;
+  font-size: 0.95em;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-self: center; /* Centraliza a div de ações na célula da grid */
+}
+
+/* Botões de Ação na Lista */
+.btn-alterar {
+  background-color: #007bff; /* Azul para Alterar */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-excluir {
+  background-color: #dc3545; /* Vermelho para Excluir */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-alterar:hover, .btn-excluir:hover {
+  opacity: 0.9;
+}
