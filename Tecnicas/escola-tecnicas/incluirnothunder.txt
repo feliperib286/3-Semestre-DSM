@@ -1,0 +1,5 @@
+{
+    "nome": "Carlos Silva",
+    "email": "carlos.silva@fatec.sp.gov.br",
+    "cpf": "63479695051"
+}
